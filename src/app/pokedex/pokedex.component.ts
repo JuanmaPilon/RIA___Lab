@@ -27,7 +27,7 @@ export class PokedexComponent implements OnInit {
         this.pokemons = data.results;
         this.pokemons.forEach(pokemon => {
           this.PokeapiService.getPokemonDetails(pokemon.name).subscribe(details => {
-            pokemon.imageUrl = details.sprites.front_default;
+            pokemon.imageUrl = details.sprites.front_default ;
           });
         });
       },
