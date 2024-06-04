@@ -22,13 +22,29 @@ export class PokedexComponent implements OnInit {
   }
 
   loadPokemons(): void {
-    this.PokeapiService.getPokemons(this.limit, this.offset).subscribe(data => {
-      this.pokemons = data.results;
+    this.PokeapiService.getPokemons(this.limit, this.offset).subscribe({
+      next: (data) => {
+        this.pokemons = data.results;
+        this.pokemons.forEach(pokemon => {
+          this.PokeapiService.getPokemonDetails(pokemon.name).subscribe(details => {
+            pokemon.imageUrl = details.sprites.front_default;
+          });
+        });
+      },
+      error: (error) => {
+        console.error('Error al cargar los Pokémon:', error);
+      }
     });
   }
+
   getPokemonDetails(name: string): void {
-    this.PokeapiService.getPokemonDetails(name).subscribe(data => {
-      console.log(data);
+    this.PokeapiService.getPokemonDetails(name).subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (error) => {
+        console.error('Error al cargar los detalles del Pokémon:', error);
+      }
     });
   }
 }
