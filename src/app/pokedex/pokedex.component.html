@@ -1,1 +1,13 @@
-<p>pokedex works!</p>
+<p>hola</p>
+<div class="container mt-4">
+  <div class="row">
+    <div *ngFor="let pokemon of pokemons" class="col-md-3 mb-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title text-capitalize">{{ pokemon.name }}</h5>
+          <button class="btn btn-primary" (click)="getPokemonDetails(pokemon.name)">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
