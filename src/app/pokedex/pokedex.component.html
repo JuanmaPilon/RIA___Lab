@@ -1,5 +1,5 @@
 <p>hola</p>
-<div class="container mt-4">
+
   <input
     type="text"
     [(ngModel)]="searchQuery"
@@ -7,7 +7,7 @@
     placeholder="Buscar Pokémon por nombre"
     class="form-control mb-4"
   />
-
+  <div class="container mt-4">
   <div class="row">
     <div *ngFor="let pokemon of filteredPokemons" class="col-md-3 mb-4">
       <div class="card">

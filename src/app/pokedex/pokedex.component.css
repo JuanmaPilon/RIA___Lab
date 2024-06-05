@@ -17,3 +17,26 @@
   background-color: #007bff;
   border-color: #007bff;
 }
+.container {
+  max-height: 70vh; /* ajusto la altura que quiero */
+  overflow-y: auto; /* se mueve dentro del contenedor */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card-img-top {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+

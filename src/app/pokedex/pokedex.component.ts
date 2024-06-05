@@ -1,38 +1,31 @@
 import { CommonModule } from '@angular/common';
 import { PokeapiService } from './../pokeapi.service';
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
 @Component({
   selector: 'app-pokedex',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule], // Incluir FormsModule aquí
   templateUrl: './pokedex.component.html',
   styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent implements OnInit {
   pokemons: any[] = [];
   filteredPokemons: any[] = [];
-  limit = 20;
-  offset = 0;
-  searchQuery: string = '';
+  searchQuery: string = ''; // Añadir propiedad searchQuery
 
-  constructor(private PokeapiService: PokeapiService) { }
+  constructor(private pokeapiService: PokeapiService) { }
 
   ngOnInit(): void {
-    this.loadPokemons();
+    this.loadAllPokemons();
   }
 
-  loadPokemons(): void {
-    this.PokeapiService.getPokemons(this.limit, this.offset).subscribe({
+  loadAllPokemons(): void {
+    this.pokeapiService.getAllPokemons().subscribe({
       next: (data) => {
-        this.pokemons = data.results;
-        this.filteredPokemons = this.pokemons;
-        this.pokemons.forEach(pokemon => {
-          this.PokeapiService.getPokemonDetails(pokemon.name).subscribe(details => {
-            pokemon.imageUrl = details.sprites.front_default;
-          });
-        });
+        this.pokemons = data;
+        this.filteredPokemons = this.pokemons; // Inicializar filteredPokemons
       },
       error: (error) => {
         console.error('Error al cargar los Pokémon:', error);
@@ -41,7 +34,7 @@ export class PokedexComponent implements OnInit {
   }
 
   getPokemonDetails(name: string): void {
-    this.PokeapiService.getPokemonDetails(name).subscribe({
+    this.pokeapiService.getPokemonDetails(name).subscribe({
       next: (data) => {
         console.log(data);
       },
@@ -57,3 +50,4 @@ export class PokedexComponent implements OnInit {
     );
   }
 }
+
