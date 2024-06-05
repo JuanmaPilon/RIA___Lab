@@ -1,19 +1,21 @@
 import { CommonModule } from '@angular/common';
 import { PokeapiService } from './../pokeapi.service';
 import { Component, OnInit } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pokedex',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './pokedex.component.html',
-  styleUrl: './pokedex.component.css'
+  styleUrls: ['./pokedex.component.css']
 })
 export class PokedexComponent implements OnInit {
   pokemons: any[] = [];
+  filteredPokemons: any[] = [];
   limit = 20;
   offset = 0;
+  searchQuery: string = '';
 
   constructor(private PokeapiService: PokeapiService) { }
 
@@ -25,9 +27,10 @@ export class PokedexComponent implements OnInit {
     this.PokeapiService.getPokemons(this.limit, this.offset).subscribe({
       next: (data) => {
         this.pokemons = data.results;
+        this.filteredPokemons = this.pokemons;
         this.pokemons.forEach(pokemon => {
           this.PokeapiService.getPokemonDetails(pokemon.name).subscribe(details => {
-            pokemon.imageUrl = details.sprites.front_default ;
+            pokemon.imageUrl = details.sprites.front_default;
           });
         });
       },
@@ -46,5 +49,11 @@ export class PokedexComponent implements OnInit {
         console.error('Error al cargar los detalles del Pokémon:', error);
       }
     });
+  }
+
+  filterPokemons(): void {
+    this.filteredPokemons = this.pokemons.filter(pokemon =>
+      pokemon.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
   }
 }
