@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './barra.component.html',
-  styleUrl: './barra.component.css'
+  styleUrls: ['./barra.component.css']
 })
 export class BarraComponent {
 

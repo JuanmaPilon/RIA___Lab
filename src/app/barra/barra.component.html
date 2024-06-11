@@ -1,17 +1,21 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" [routerLink]="['/app']">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" [routerLink]="['/inicio']" routerLinkActive="router-link-active" >Inicio</a>
-        <a class="nav-link" [routerLink]="['/pokedex']">Pokedex</a>
-        <a class="nav-link" [routerLink]="['/team']">Team</a>
-        <a class="nav-link" [routerLink]="['/perfil']">Perfil</a>
-        <a class="nav-link" [routerLink]="['/login']">Login</a>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light flex-grow-1" style="background-image: url('assets/pokekira.jpg'); background-size: cover; background-position: center;">
+  <a class="navbar-brand" href="#">
+    <img src="assets/pokeadorno.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-top">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ">
+      <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive="active">Inicio</a>
+      <a class="nav-link" [routerLink]="['/pokedex']" routerLinkActive="active">Pokedex</a>
+      <a class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
+      <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
+    </div>
+    <div class="navbar-nav ms-auto">
+      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
     </div>
   </div>
 </nav>
+
+
