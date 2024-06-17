@@ -30,7 +30,7 @@ export class PokeapiService {
           this.getPokemonDetails(pokemon.name).pipe(
             map(details => ({
               ...pokemon,
-              imageUrl: details.sprites.front_default
+              imageUrl: details.sprites.other.dream_world.front_default
             }))
           )
         );
