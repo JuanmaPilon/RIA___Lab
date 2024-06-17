@@ -49,5 +49,18 @@ export class PokedexComponent implements OnInit {
       pokemon.name.toLowerCase().includes(this.searchQuery.toLowerCase())
     );
   }
+  getPokemonCardClass(pokemon: any): string {
+    // Devolver la clase CSS correspondiente al tipo de Pokémon
+    switch (pokemon.type.toLowerCase()) {
+      case 'grass':
+        return 'card card-grass';
+      case 'fire':
+        return 'card card-fire';
+      case 'water':
+        return 'card card-water';
+      default:
+        return 'card';
+    }
+  }
 }
 
