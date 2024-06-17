@@ -56,12 +56,13 @@
     min-height: 100vh;
     height: 100%;
     background-color: rgb(32, 31, 31);
-
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    padding: 0;
     box-sizing: inherit;
     position: relative;
+    margin: 0; /* Asegura que no hay margen exterior en el cuerpo */
+    background-image: url('/assets/fondo.png');
+    background-position: right bottom; /* Posición en la esquina inferior derecha */
+    background-repeat: no-repeat;
 
   }
 

@@ -4,21 +4,21 @@ footer {
   position: relative; /* Posición relativa para alinear contenido */
   left: 0;
   bottom: 0;
-  padding: 0; /* Quitar padding para asegurar que el footer ocupe todo el ancho */
+  padding: 0;
 }
 
 footer p {
-  margin: 0; /* Quitar margen de los párrafos */
+  margin: 0;
 }
 
 footer a {
-  color: #ffffff; /* Color de texto blanco */
-  text-decoration: none; /* Quitar subrayado */
+  color: #ffffff;
+  text-decoration: none;
 }
 
 footer a:hover {
-  color: #cccccc; /* Color de texto al pasar el cursor */
-  text-decoration: underline; /* Subrayado al pasar el cursor */
+  color: #cccccc;
+  text-decoration: underline;
 }
 
 .footer-divider {
