@@ -1,0 +1,46 @@
+footer {
+  background-color: #343a40; /* Fondo oscuro */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  position: relative; /* Posición relativa para alinear contenido */
+  left: 0;
+  bottom: 0;
+  padding: 0; /* Quitar padding para asegurar que el footer ocupe todo el ancho */
+}
+
+footer p {
+  margin: 0; /* Quitar margen de los párrafos */
+}
+
+footer a {
+  color: #ffffff; /* Color de texto blanco */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+footer a:hover {
+  color: #cccccc; /* Color de texto al pasar el cursor */
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+.footer-divider {
+  margin: 0 0 20px 0; /* Ajustar margen para separar la línea del contenido */
+  border-top: 1px solid #666; /* Color de la línea */
+}
+
+.footer-image {
+  height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+  margin: 0 5px; /* Margen para separar la imagen del contenido */
+
+}
+
+.list-inline-item {
+  margin-right: 15px; /* Espacio entre los elementos de la lista */
+}
+
+.list-inline-item:last-child {
+  margin-right: 0; /* Quitar margen del último elemento */
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
