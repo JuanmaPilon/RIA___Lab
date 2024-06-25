@@ -12,10 +12,13 @@
       <a class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
       <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
     </div>
+    <!-- <button class="nav-link btn btn-link" (click)="openLoginModal()">Login</button> -->
     <div class="navbar-nav ms-auto">
-      <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+      <!-- <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active" (click)="openLoginModal()">Login</a> -->
+      <button class="nav-link btn btn-link" (click)="openLoginModal()">Login</button>
+      <!-- <app-login-modal></app-login-modal> -->
     </div>
   </div>
 </nav>
-
+<app-login></app-login>
 
