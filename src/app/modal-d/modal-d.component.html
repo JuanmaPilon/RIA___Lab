@@ -1,0 +1,21 @@
+<div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isVisible}" [ngStyle]="{'display': isVisible ? 'block' : 'none'}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{pokemon?.name | titlecase}}</h5>
+        <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="pokemon?.sprites?.other?.dream_world?.front_default" alt="{{pokemon?.name}}">
+        <p><strong>Height:</strong> {{pokemon?.height}}</p>
+        <p><strong>Weight:</strong> {{pokemon?.weight}}</p>
+        <p><strong>Abilities:</strong> <span *ngFor="let ability of pokemon?.abilities">{{ability.ability.name}} </span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

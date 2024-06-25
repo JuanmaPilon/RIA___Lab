@@ -1,12 +1,14 @@
+import { ModalDComponent } from './../modal-d/modal-d.component';
 import { CommonModule } from '@angular/common';
 import { PokeapiService } from './../pokeapi.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Importar FormsModule
+
 
 @Component({
   selector: 'app-pokedex',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Incluir FormsModule aquí
+  imports: [CommonModule, FormsModule, ModalDComponent], // Incluir FormsModule aquí
   templateUrl: './pokedex.component.html',
   styleUrls: ['./pokedex.component.css']
 })
@@ -14,6 +16,9 @@ export class PokedexComponent implements OnInit {
   pokemons: any[] = [];
   filteredPokemons: any[] = [];
   searchQuery: string = ''; // Añadir propiedad searchQuery
+
+  @ViewChild(ModalDComponent) ModalDComponent!: ModalDComponent;
+
 
   constructor(private pokeapiService: PokeapiService) { }
 
@@ -37,6 +42,7 @@ export class PokedexComponent implements OnInit {
     this.pokeapiService.getPokemonDetails(name).subscribe({
       next: (data) => {
         console.log(data);
+        this.ModalDComponent.openModal(data);
       },
       error: (error) => {
         console.error('Error al cargar los detalles del Pokémon:', error);
@@ -62,5 +68,6 @@ export class PokedexComponent implements OnInit {
         return 'card';
     }
   }
+
 }
 
