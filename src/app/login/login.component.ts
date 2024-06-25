@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RegisterComponent],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  @ViewChild(RegisterComponent) register!: RegisterComponent;
   loginForm: FormGroup;
   isVisible: boolean = false;
 
@@ -33,5 +35,9 @@ export class LoginComponent {
       console.log('Login successful', this.loginForm.value);
       this.closeModal();
     }
+  }
+
+  openRegisterModal(): void {
+    this.register.openModal();
   }
 }
