@@ -1,6 +1,13 @@
 <div class="d-flex p-2 align-self-center">
+  <h1>Bienvenido a la PokeAPI!</h1>
+</div>
 
-  <button class="btn btn-primary">Poke</button>
-
-  <p>Congratulations! Your app is running. 🎉</p>
+<div *ngIf="pokemonImages.length > 0">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let image of pokemonImages">
+      <ng-template carouselSlide>
+        <img [src]="image" alt="Pokemon Image">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
 </div>

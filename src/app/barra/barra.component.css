@@ -12,13 +12,12 @@
   background-color: #9e9e9e;
   border-radius: 0.25rem;
 }
+
 .nav-link.active{
   font-weight: bold;
   background-color: #202020bf; /* Color de fondo más oscuro */
   border-radius: 0.25rem;
 }
-
-
 
  .nav-link:focus, .nav-link:hover  {
   font-weight: bold;
