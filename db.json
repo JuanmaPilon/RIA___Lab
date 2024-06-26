@@ -39,6 +39,16 @@
       "email": "Andres@Romano",
       "fdn": "2024-06-04",
       "favPok": "Glalie"
+    },
+    {
+      "id": "32ad",
+      "username": "maladroga2",
+      "password": "173af653133d964edfc16cafe0aba33c8f500a07f3ba3f81943916910c257705",
+      "nombre": "Nicolas",
+      "apellido": "Silva",
+      "email": "nicolas.silva@utec.edu.uy",
+      "fdn": "1997-03-19",
+      "favPok": "kyogre"
     }
   ],
   "equipo": [

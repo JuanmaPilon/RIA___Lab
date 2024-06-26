@@ -1,13 +1,17 @@
 .navbar-nav .nav-link {
   transition: transform 0.1s ease-in-out, background-color 0.3s;
   color: #000000 !important;
+
 }
 
 .navbar-nav .nav-link:active {
   transform: scale(0.95);
+  border-radius: 0.25rem;
+
 }
 
 .navbar-nav {
+  margin-right: 1%;
   font-weight: bold;
   background-color: #9e9e9e;
   border-radius: 0.25rem;
@@ -24,6 +28,13 @@
   background-color: #202020bf; /* Color de fondo más oscuro */
   border-radius: 0.25rem;
 }
-
+a{
+  padding-left: 1%;
+}
+.borde-navbar {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
 
 

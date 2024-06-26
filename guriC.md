@@ -9,3 +9,8 @@ Despues levantan el json server con la """""bd""""" de jasson:
 Despues nomas hacemos las llamadas a los endpoints:
 
 - http://localhost:3000/usuario
+
+Comandos para instalar cryptojs
+
+- npm install crypto-js
+- npm install --save-dev @types/crypto-js

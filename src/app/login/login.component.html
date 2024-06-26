@@ -22,9 +22,10 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
-            <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
-            <button type="button" class="nav-link btn btn-link btn-outline-info" (click)="openRegisterModal()">Register</button>
+          <div class="modal-footer"><button type="button" class="btn btn-outline-dark" (click)="openRegisterModal()">Register</button></div>
+
+           <div class="modal-footer"><button type="submit" class="btn btn-outline-dark" [disabled]="loginForm.invalid">Login</button>
+                <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button></div>
           </div>
         </form>
       </div>
