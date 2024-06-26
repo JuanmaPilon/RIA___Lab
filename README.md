@@ -14,29 +14,21 @@
 - Angular
 - NodeJS
 - Javascript
-- CSS
-- HTML
-- Boostrap
+- Typescript
+- CSS3
+- HTML5
+- Bootstrap
 - Tailwinds
+- Ajax
 
 ### Propuesta:
 
 Para el desarrollo de nuestro laboratorio optamos por realizar una SPA (single page aplication) que consuma webservices desde una API externa. Elegimos pokeapi (https://pokeapi.co/docs/v2) para el uso de la misma.  En nuestra página crearemos diferentes funcionalidades.
 
-## Herramientas de desarrollo
+###	Librerias a utilizar
 
-•	HTML5
-•	CSS3
-•	Angular
-•	TypeScript
-•	Boostrap / Tailwinds
-•	Ajax
-•	Node js
+•	Animate.CSS
+•	SweetAlert
+•	json Server
 
-##	Librerías ha utilizar
-
-•	Librería Animate.CSS
-•	 Librería SweetAlert
-•	Librería npm json server
-
-### Deploy:
+## Deploy:

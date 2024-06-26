@@ -1,0 +1,32 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "userName": "Azzaio",
+      "nombre": "Juanma",
+      "apellido": "Pilon",
+      "email": "juanmartin.pilon@gmail.com",
+      "fdn": "06/07/1996",
+      "favPok": "Chorizard"
+    },
+    {
+      "id": "2",
+      "userName": "Negro",
+      "nombre": "Nico",
+      "apellido": "Perez",
+      "email": "niconegro@gmail.com",
+      "fdn": "03/01/1844",
+      "favPok": "nepezord"
+    }
+  ] ,
+  "equipo": [
+    {
+        "id": "1",
+        "Poke1": "A",
+        "Poke2": "B",
+        "Poke3": "C",
+        "Poke4": "E",
+        "Poke5": "F"
+    }
+  ]
+}
