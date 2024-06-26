@@ -28,6 +28,41 @@
               Confirm Password is required
             </div>
           </div>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" formControlName="nombre" class="form-control" type="text" />
+            <div *ngIf="registerForm.get('nombre')?.invalid && registerForm.get('nombre')?.touched" class="text-danger">
+              Nombre is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input id="apellido" formControlName="apellido" class="form-control" type="text" />
+            <div *ngIf="registerForm.get('apellido')?.invalid && registerForm.get('apellido')?.touched" class="text-danger">
+              Apellido is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" formControlName="email" class="form-control" type="email" />
+            <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
+              Please enter a valid email
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fdn">Fecha de Nacimiento</label>
+            <input id="fdn" formControlName="fdn" class="form-control" type="date" />
+            <div *ngIf="registerForm.get('fdn')?.invalid && registerForm.get('fdn')?.touched" class="text-danger">
+              Fecha de Nacimiento is required
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="favPok">Pokemon Favorito</label>
+            <input id="favPok" formControlName="favPok" class="form-control" type="text" />
+            <div *ngIf="registerForm.get('favPok')?.invalid && registerForm.get('favPok')?.touched" class="text-danger">
+              Pokemon Favorito is required
+            </div>
+          </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
             <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>

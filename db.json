@@ -7,7 +7,8 @@
       "apellido": "Pilon",
       "email": "juanmartin.pilon@gmail.com",
       "fdn": "06/07/1996",
-      "favPok": "Chorizard"
+      "favPok": "Chorizard",
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
     },
     {
       "id": "2",
@@ -16,17 +17,38 @@
       "apellido": "Perez",
       "email": "niconegro@gmail.com",
       "fdn": "03/01/1844",
-      "favPok": "nepezord"
+      "favPok": "nepezord",
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+    },
+    {
+      "id": "3786",
+      "username": "test",
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "nombre": "nombtest",
+      "apellido": "apetest",
+      "email": "test@test",
+      "fdn": "2024-06-12",
+      "favPok": "Evee"
+    },
+    {
+      "id": "9ecb",
+      "username": "sky",
+      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "nombre": "andres",
+      "apellido": "romano",
+      "email": "Andres@Romano",
+      "fdn": "2024-06-04",
+      "favPok": "Glalie"
     }
-  ] ,
+  ],
   "equipo": [
     {
-        "id": "1",
-        "Poke1": "A",
-        "Poke2": "B",
-        "Poke3": "C",
-        "Poke4": "E",
-        "Poke5": "F"
+      "id": "1",
+      "Poke1": "A",
+      "Poke2": "B",
+      "Poke3": "C",
+      "Poke4": "E",
+      "Poke5": "F"
     }
   ]
 }
