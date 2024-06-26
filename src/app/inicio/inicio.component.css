@@ -1,0 +1,21 @@
+.carousel-item {
+  text-align: center;
+}
+
+.pokemon-image {
+  max-height: 400px; /* Altura */
+  max-width: 100%;
+  object-fit: contain;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.carousel-caption {
+  position:static;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px; /* Limita el ancho máximo del texto */
+  margin: 10px auto 0 auto; /* Centra el texto y añade margen superior */
+  border-radius: 5px; /* Bordes redondeados */
+}

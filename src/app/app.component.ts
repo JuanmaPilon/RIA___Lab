@@ -4,14 +4,13 @@ import { BarraComponent } from './barra/barra.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, BarraComponent, PokedexComponent, FooterComponent, InicioComponent, LoginComponent, RegisterComponent, CommonModule],
+  imports: [RouterOutlet, BarraComponent, PokedexComponent, FooterComponent, InicioComponent, LoginComponent, RegisterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,13 +1,23 @@
-<div class="d-flex p-2 align-self-center">
-  <h1>Bienvenido a la PokeAPI!</h1>
+<div *ngIf="randomPokemons.length">
+  <div id="pokemonCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div *ngFor="let pokemon of randomPokemons; let i = index" class="carousel-item" [class.active]="i === 0">
+        <div class="d-flex flex-column align-items-center">
+          <img [src]="pokemon.imageUrl" class="pokemon-image" alt="{{pokemon.name}}">
+          <div class="carousel-caption d-block">
+            <h5>{{ pokemon.name }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pokemonCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
 
-<div *ngIf="pokemonImages.length > 0">
-  <owl-carousel-o [options]="customOptions">
-    <ng-container *ngFor="let image of pokemonImages">
-      <ng-template carouselSlide>
-        <img [src]="image" alt="Pokemon Image">
-      </ng-template>
-    </ng-container>
-  </owl-carousel-o>
-</div>

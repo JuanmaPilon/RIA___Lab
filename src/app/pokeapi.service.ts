@@ -9,14 +9,14 @@ import { map, switchMap } from 'rxjs/operators';
 export class PokeapiService {
 
   private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon'; // la api de la pokeapi
-  private pokemonCount = 200; // Número total de Pokémon (puede cambiar con el tiempo)
+  private pokemonCount = 150; // Número total de Pokémon (puede cambiar con el tiempo)
 
   constructor(private http: HttpClient) { }
 
 
   getAllPokemons(): Observable<any[]> {
     const requests: Observable<any>[] = [];
-    const limit = 100; // Número de Pokémon por solicitud
+    const limit = 150; // Número de Pokémon por solicitud
     for (let offset = 0; offset < this.pokemonCount; offset += limit) {
       requests.push(this.http.get<any>(`${this.baseUrl}?limit=${limit}&offset=${offset}`));
     }
