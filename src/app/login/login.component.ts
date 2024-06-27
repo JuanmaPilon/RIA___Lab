@@ -17,7 +17,6 @@ export class LoginComponent {
   @ViewChild(RegisterComponent) register!: RegisterComponent;
   loginForm: FormGroup;
   isVisible: boolean = false;
-  errorMessage: string = '';
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.loginForm = this.fb.group({
@@ -40,11 +39,8 @@ export class LoginComponent {
       const password = this.loginForm.value.password;
       const hashedPassword = CryptoJS.MD5(password).toString(CryptoJS.enc.Hex);
 
-      console.log('Username:', username);
-      console.log('Hashed Password:', hashedPassword);
-
       this.http.get<any[]>('http://localhost:3000/usuario?username=' + username).subscribe(users => {
-        console.log('Users:', users);
+
 
         if (users.length === 1) {
           const user = users[0];
@@ -56,23 +52,19 @@ export class LoginComponent {
             localStorage.setItem('currentUser', JSON.stringify(user));
 
             // Redireccionar al usuario a la página deseada después de iniciar sesión
-            this.router.navigate(['/dashboard']);
-            this.errorMessage = '';
+            this.router.navigate(['/perfil']);
+           this.closeModal();
           } else {
             console.error('Invalid username or password');
-            this.errorMessage = 'Invalid username or password';
           }
         } else {
           console.error('Invalid username or password');
-          this.errorMessage = 'Invalid username or password';
         }
       }, error => {
         console.error('Error logging in', error);
-        this.errorMessage = 'Error logging in. Please try again later.';
       });
     }
   }
-
 
   openRegisterModal(): void {
     this.register.openModal();

@@ -9,14 +9,14 @@
     <div class="navbar-nav ">
       <a class="nav-link" [routerLink]="['/inicio']" routerLinkActive="active">Inicio</a>
       <a class="nav-link" [routerLink]="['/pokedex']" routerLinkActive="active">Pokedex</a>
-      <a class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
-      <a class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
+      <a *ngIf="Sesion.isAuthenticated()" class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
+      <a *ngIf="Sesion.isAuthenticated()" class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
     </div>
     <div class="navbar-nav ms-auto">
-      <button class="nav-link btn btn-link" (click)="openLoginModal()">Login</button>
+      <button *ngIf="!Sesion.isAuthenticated()" class="nav-link btn btn-link" (click)="openLoginModal()">Login</button>
+      <button *ngIf="Sesion.isAuthenticated()" class="nav-link btn btn-link" (click)="logout()">Logout</button>
     </div>
   </div>
 </nav>
 <app-login></app-login>
-
 
