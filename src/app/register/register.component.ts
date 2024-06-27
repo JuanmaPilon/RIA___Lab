@@ -45,7 +45,7 @@ export class RegisterComponent {
   onSubmit(): void {
     if (this.registerForm.valid) {
       const user = this.registerForm.value;
-      user.password = CryptoJS.SHA256(user.password).toString(CryptoJS.enc.Hex);
+      user.password = CryptoJS.MD5(user.password).toString(CryptoJS.enc.Hex);
 
       this.http.post('http://localhost:3000/usuario', user).subscribe(response => {
         console.log('User registered successfully', response);

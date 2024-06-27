@@ -2,28 +2,28 @@
   "usuario": [
     {
       "id": "1",
-      "userName": "Azzaio",
+      "username": "Azzaio",
       "nombre": "Juanma",
       "apellido": "Pilon",
       "email": "juanmartin.pilon@gmail.com",
       "fdn": "06/07/1996",
       "favPok": "Chorizard",
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+      "password": "202cb962ac59075b964b07152d234b70"
     },
     {
       "id": "2",
-      "userName": "Negro",
+      "username": "Negro",
       "nombre": "Nico",
       "apellido": "Perez",
       "email": "niconegro@gmail.com",
       "fdn": "03/01/1844",
       "favPok": "nepezord",
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+      "password": "202cb962ac59075b964b07152d234b70"
     },
     {
       "id": "3786",
       "username": "test",
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "nombtest",
       "apellido": "apetest",
       "email": "test@test",
@@ -33,7 +33,7 @@
     {
       "id": "9ecb",
       "username": "sky",
-      "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+      "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "andres",
       "apellido": "romano",
       "email": "Andres@Romano",
@@ -41,14 +41,34 @@
       "favPok": "Glalie"
     },
     {
-      "id": "32ad",
+      "id": "e16d",
+      "username": "cheto",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "nombre": "cheto",
+      "apellido": "cheto",
+      "email": "cheto@chetomal",
+      "fdn": "2024-06-05",
+      "favPok": "pikachu"
+    },
+    {
+      "id": "1b1f",
       "username": "maladroga2",
-      "password": "173af653133d964edfc16cafe0aba33c8f500a07f3ba3f81943916910c257705",
+      "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "Nicolas",
       "apellido": "Silva",
-      "email": "nicolas.silva@utec.edu.uy",
-      "fdn": "1997-03-19",
-      "favPok": "kyogre"
+      "email": "nicosilva19@hotmail.com",
+      "fdn": "1997-03-05",
+      "favPok": "chikapu"
+    },
+    {
+      "id": "32e2",
+      "username": "yo",
+      "password": "6d0007e52f7afb7d5a0650b0ffb8a4d1",
+      "nombre": "yo",
+      "apellido": "yo",
+      "email": "yo@yo",
+      "fdn": "2024-06-05",
+      "favPok": "yo"
     }
   ],
   "equipo": [
