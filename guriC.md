@@ -14,3 +14,6 @@ Comandos para instalar cryptojs
 
 - npm install crypto-js
 - npm install --save-dev @types/crypto-js
+
+libreria para animacion
+- npm install animate.css --save

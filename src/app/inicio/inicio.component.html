@@ -1,8 +1,12 @@
-<div *ngIf="randomPokemons.length">
+<div class="animate__animated animate__jackInTheBox animate__infinite	fw-bolder flex-container">
+  <br/><br/><br/>
+ <h1> Bienvenidos a tu API</h1>
+</div>
+<div *ngIf="randomPokemons.length" class="fixed-bottom-container">
   <div id="pokemonCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div *ngFor="let pokemon of randomPokemons; let i = index" class="carousel-item" [class.active]="i === 0">
-        <div class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center"(click)="getPokemonDetails(pokemon.name)">
           <img [src]="pokemon.imageUrl" class="pokemon-image" alt="{{pokemon.name}}">
           <div class="carousel-caption d-block">
             <h5>{{ pokemon.name }}</h5>
@@ -20,4 +24,4 @@
     </button>
   </div>
 </div>
-
+<app-modalDComponent></app-modalDComponent>

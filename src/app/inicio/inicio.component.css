@@ -1,6 +1,6 @@
 .carousel {
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   margin: 0 auto;
   position: relative;
   padding: auto;
@@ -40,4 +40,27 @@
   color: white;
   padding: 10px;
   border-radius: 5px;
+}
+h1{
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 150px;
+  font-family:'Courier New', Courier, monospace ;
+}
+.animate__jackInTheBox{
+  --animate-duration: 5s;
+}
+.fixed-bottom-container {
+  margin-top: auto;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+.flex-container .content {
+  flex: 1;
 }
