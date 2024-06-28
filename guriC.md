@@ -17,3 +17,5 @@ Comandos para instalar cryptojs
 
 libreria para animacion
 - npm install animate.css --save
+- npm install sweetalert2 @sweetalert2/ngx-sweetalert2
+- npm install @sweetalert2/themes

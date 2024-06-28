@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.sweetalert-borderless {
+  border: none !important;
+  border-radius: 10%;
+  box-shadow: none !important;
+  background-color: #ffffff !important;
+}
+
+.sweetalert-borderless-button {
+  border: none !important;
+  background-color: #7c7e7f !important;
+  color: white !important;
+}

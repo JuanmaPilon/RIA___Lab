@@ -5,6 +5,7 @@ import { RegisterComponent } from '../register/register.component';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import * as CryptoJS from 'crypto-js';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -47,7 +48,15 @@ export class LoginComponent {
           console.log('Retrieved User:', user);
           if (user.password === hashedPassword) {
             console.log('Login successful', user);
-
+            Swal.fire({
+               title:'Login successful',
+               text:'Bienvenido!',
+               icon:'success',
+              customClass: {
+                popup: 'sweetalert-borderless',
+                confirmButton: 'sweetalert-borderless-button'
+              }
+          });
             // Simulación de sesión: guardar usuario en localStorage
             localStorage.setItem('currentUser', JSON.stringify(user));
 
@@ -55,12 +64,15 @@ export class LoginComponent {
             this.router.navigate(['/perfil']);
            this.closeModal();
           } else {
+            Swal.fire('Login failed', 'usuario o contraseña invalidos', 'error');
             console.error('Invalid username or password');
           }
         } else {
+          Swal.fire('Login failed', 'usuario o contraseña invalidos', 'error',);
           console.error('Invalid username or password');
         }
       }, error => {
+        Swal.fire('Error', 'Falla inesperada, prueba más tarde', 'error');
         console.error('Error logging in', error);
       });
     }
@@ -69,4 +81,5 @@ export class LoginComponent {
   openRegisterModal(): void {
     this.register.openModal();
   }
+
 }
