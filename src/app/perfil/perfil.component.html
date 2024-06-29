@@ -9,14 +9,14 @@
 
 <body>
   <div class="profile-container">
-    <img src="../../assets/perfil1.jpg" class="profile-image" alt="Nombre de usuario"><!-- reemplazar con los datos del usuario -->
-    <h2 class="profile-name">Entrenador Placeholder</h2><!-- reemplazar con los datos del usuario -->
+   <img [src]="'../../assets/' + currentUser.pfp" class="profile-image" alt="Nombre de usuario">
+    <h2 class="profile-name">{{ currentUser.username}}</h2>
     <div class="profile-details">
-      <p>Nombre: Pepito</p><!-- reemplazar con los datos del usuario -->
-      <p>Apellido: Placeholder</p><!-- reemplazar con los datos del usuario -->
-      <p>Email: Placeholder</p><!-- reemplazar con los datos del usuario -->
-      <p>Fecha de Nacimiento: 31/10/00</p><!-- reemplazar con los datos del usuario -->
-      <p>Pokémon Favorito: Placeholdermon</p><!-- reemplazar con los datos del usuario -->
+      <p>Nombre:  {{currentUser.nombre}}</p>
+      <p>Apellido: {{currentUser.apellido}}</p>
+      <p>Email: {{currentUser.email}}</p>
+      <p>Fecha de Nacimiento: {{currentUser.fdn}}</p>
+      <p>Pokémon Favorito: {{currentUser.favPok}}</p>
     </div>
   </div>
 </body>

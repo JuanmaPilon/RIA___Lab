@@ -3,6 +3,7 @@
     {
       "id": "1",
       "username": "Azzaio",
+      "pfp": "perfil1.jpg",
       "nombre": "Juanma",
       "apellido": "Pilon",
       "email": "juanmartin.pilon@gmail.com",
@@ -13,6 +14,7 @@
     {
       "id": "2",
       "username": "Negro",
+      "pfp": "perfil1.jpg",
       "nombre": "Nico",
       "apellido": "Perez",
       "email": "niconegro@gmail.com",
@@ -23,6 +25,7 @@
     {
       "id": "3786",
       "username": "test",
+      "pfp": "perfil1.jpg",
       "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "nombtest",
       "apellido": "apetest",
@@ -33,6 +36,7 @@
     {
       "id": "9ecb",
       "username": "sky",
+      "pfp": "perfil1.jpg",
       "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "andres",
       "apellido": "romano",
@@ -43,6 +47,7 @@
     {
       "id": "e16d",
       "username": "cheto",
+      "pfp": "perfil1.jpg",
       "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "cheto",
       "apellido": "cheto",
@@ -53,6 +58,7 @@
     {
       "id": "1b1f",
       "username": "maladroga2",
+      "pfp": "perfil1.jpg",
       "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "Nicolas",
       "apellido": "Silva",
@@ -63,6 +69,7 @@
     {
       "id": "32e2",
       "username": "yo",
+      "pfp": "perfil1.jpg",
       "password": "6d0007e52f7afb7d5a0650b0ffb8a4d1",
       "nombre": "yo",
       "apellido": "yo",
