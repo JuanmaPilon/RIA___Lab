@@ -1,0 +1,118 @@
+.glob {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.team {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.header {
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+}
+.search-bar {
+  margin: 20px 0;
+  text-align: center;
+}
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 400px;
+}
+.team-members-container {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.team-members {
+  background-color: #ddd;
+}
+.team-members div {
+  background-color: #bbb;
+  margin: 5px 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 12px;
+}
+.details {
+  flex: 2;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #eee;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.details img {
+  max-width: 100%;
+  height: auto;
+}
+.details-container {
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 200px;
+  min-height: 120px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+.add-btn {
+  background-color: #bbb;
+  color: #333;
+}
+.remove-btn {
+  background-color: #888;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .team {
+      flex-direction: column;
+      align-items: center;
+  }
+  .team-members-container, .details {
+      width: 100%;
+  }
+  .buttons {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 20px;
+  }
+  .details-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
