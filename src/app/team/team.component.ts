@@ -43,8 +43,9 @@ export class TeamComponent implements OnInit {
     ).slice(0, 3);
   }
 
-  selectPokemon(pokemon: any): void {
+  selectPokemon(pokemon: any, fromTeam: boolean = false): void {
     this.selectedPokemon = pokemon;
+
     Swal.fire({
       title: pokemon.name,
       text: '¿Qué quieres hacer con este Pokémon?',
@@ -52,15 +53,16 @@ export class TeamComponent implements OnInit {
       imageWidth: 200,
       imageHeight: 200,
       showCancelButton: true,
-      showDenyButton: true,
-      confirmButtonText: 'Agregar',
-      denyButtonText: 'Quitar',
-      cancelButtonText: 'Cancelar'
+      showDenyButton: fromTeam,
+      confirmButtonText: fromTeam ? 'Quitar del equipo' : 'Agregar',
+      denyButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.addPokemon(pokemon);
-      } else if (result.isDenied) {
-        this.removePokemon(pokemon);
+        if (fromTeam) {
+          this.removePokemon(pokemon);
+        } else {
+          this.addPokemon(pokemon);
+        }
       }
     });
   }
@@ -77,7 +79,7 @@ export class TeamComponent implements OnInit {
   }
 
   removePokemon(pokemon: any): void {
-    const index = this.team.findIndex(p => p.name.toLowerCase() === pokemon.name.toLowerCase());
+    const index = this.team.indexOf(pokemon);
     if (index !== -1) {
       this.team.splice(index, 1);
       this.saveTeamToServer();
@@ -98,7 +100,6 @@ export class TeamComponent implements OnInit {
       return;
     }
 
-    // Verifica primero que el usuario exista y obtén su información actual
     this.http.get<any>(`http://localhost:3000/usuario/${userId}`)
       .subscribe(
         userData => {
@@ -107,13 +108,11 @@ export class TeamComponent implements OnInit {
             return;
           }
 
-          // Actualiza solo el campo equipo del usuario en la base de datos
           const updatedUser = {
             ...userData,
             equipo: this.team
           };
 
-          // solicitud PUT para actualizar el usuario completo
           this.http.put<any>(`http://localhost:3000/usuario/${userId}`, updatedUser)
             .pipe(
               catchError(error => {
@@ -135,7 +134,6 @@ export class TeamComponent implements OnInit {
         }
       );
   }
-
 
   loadTeamFromServer(username: string): void {
     this.http.get<any>(`http://localhost:3000/usuario?username=${username}`)

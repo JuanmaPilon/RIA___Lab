@@ -4,7 +4,7 @@
       <div class="team-members-container">
         <div class="header">MI EQUIPO:</div>
         <div class="team-members">
-          <div *ngFor="let pokemon of team">
+          <div *ngFor="let pokemon of team" (click)="selectPokemon(pokemon, true)">
             <img [src]="pokemon.imageUrl" alt="{{ pokemon.name }}" class="team-member-img">
             <div>{{ pokemon.name }}</div>
           </div>
@@ -21,7 +21,7 @@
         <div class="details-container mt-4">
           <div class="row">
             <div *ngFor="let pokemon of filteredPokemons" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div class="card h-100" (click)="selectPokemon(pokemon)">
+              <div class="card h-100" (click)="selectPokemon(pokemon, false)">
                 <img [src]="pokemon.imageUrl" class="card-img-top" alt="{{ pokemon.name }}">
                 <div class="card-body text-center">
                   <h5 class="card-title text-capitalize">{{ pokemon.name }}</h5>

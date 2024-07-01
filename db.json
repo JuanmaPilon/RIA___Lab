@@ -64,7 +64,14 @@
       "apellido": "Silva",
       "email": "nicosilva19@hotmail.com",
       "fdn": "1997-03-05",
-      "favPok": "chikapu"
+      "favPok": "chikapu",
+      "equipo": [
+        {
+          "name": "pikachu",
+          "url": "https://pokeapi.co/api/v2/pokemon/25/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
+        }
+      ]
     },
     {
       "id": "32e2",
@@ -78,19 +85,19 @@
       "favPok": "yo",
       "equipo": [
         {
-          "name": "Charizard",
-          "url": "https://pokeapi.co/api/v2/pokemon/6/",
-          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
-        },
-        {
-          "name": "charmeleon",
-          "url": "https://pokeapi.co/api/v2/pokemon/5/",
-          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
-        },
-        {
           "name": "charmander",
           "url": "https://pokeapi.co/api/v2/pokemon/4/",
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+        },
+        {
+          "name": "bulbasaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/1/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+        },
+        {
+          "name": "venusaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/3/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
         }
       ]
     }
