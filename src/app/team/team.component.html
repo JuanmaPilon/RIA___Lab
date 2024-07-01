@@ -1,28 +1,39 @@
 <div class="glob">
   <div class="container">
-      <div class="team">
-          <div class="team-members-container">
-              <div class="header">MI EQUIPO:</div>
-              <div class="team-members">
-                  <div>pokemon</div>
-                  <div>pokemon</div>
-                  <div>pokemon</div>
-                  <div>pokemon</div>
-                  <div>pokemon</div>
-              </div>
+    <div class="team">
+      <div class="team-members-container">
+        <div class="header">MI EQUIPO:</div>
+        <div class="team-members">
+          <div *ngFor="let pokemon of pokemons.slice(0, 5)">
+            {{ pokemon.name }}
           </div>
-          <div class="details">
-              <div class="search-bar">
-                  <input type="text" placeholder="Buscar">
-              </div>
-              <div class="details-container">
-                  <img src="dog.jpg" alt="dog">
-                  <div class="buttons">
-                      <button class="add-btn">Agregar</button>
-                      <button class="remove-btn">Quitar</button>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
+      <div class="details">
+        <input
+          type="text"
+          [(ngModel)]="searchQuery"
+          (input)="filterPokemons()"
+          placeholder="Buscar Pokémon por nombre"
+          class="form-control mb-4"
+        />
+        <div class="details-container mt-4">
+          <div class="row">
+            <div *ngFor="let pokemon of filteredPokemons" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+              <div class="card h-100" (click)="selectPokemon(pokemon)">
+                <img [src]="pokemon.imageUrl" class="card-img-top" alt="{{ pokemon.name }}">
+                <div class="card-body text-center">
+                  <h5 class="card-title text-capitalize">{{ pokemon.name }}</h5>
+                  <div class="buttons" *ngIf="selectedPokemon === pokemon">
+                    <button class="add-btn">Agregar</button>
+                    <button class="remove-btn">Quitar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
