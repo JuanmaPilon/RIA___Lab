@@ -83,16 +83,6 @@
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
         },
         {
-          "name": "Venusaur",
-          "url": "https://pokeapi.co/api/v2/pokemon/3/",
-          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
-        },
-        {
-          "name": "ivysaur",
-          "url": "https://pokeapi.co/api/v2/pokemon/2/",
-          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
-        },
-        {
           "name": "charmeleon",
           "url": "https://pokeapi.co/api/v2/pokemon/5/",
           "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"

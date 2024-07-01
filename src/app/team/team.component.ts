@@ -77,7 +77,7 @@ export class TeamComponent implements OnInit {
   }
 
   removePokemon(pokemon: any): void {
-    const index = this.team.findIndex(p => p.name === pokemon.name);
+    const index = this.team.findIndex(p => p.name.toLowerCase() === pokemon.name.toLowerCase());
     if (index !== -1) {
       this.team.splice(index, 1);
       this.saveTeamToServer();
