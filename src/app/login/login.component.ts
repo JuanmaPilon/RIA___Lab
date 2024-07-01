@@ -64,15 +64,36 @@ export class LoginComponent {
             this.router.navigate(['/perfil']);
            this.closeModal();
           } else {
-            Swal.fire('Login failed', 'usuario o contraseña invalidos', 'error');
+            Swal.fire({
+              title: 'Login failed',
+              text: 'usuario o contraseña invalidos',
+              icon: 'error',
+              customClass: {
+                confirmButton: 'sweetalert-borderless-button'
+              },
+            });
             console.error('Invalid username or password');
           }
         } else {
-          Swal.fire('Login failed', 'usuario o contraseña invalidos', 'error',);
+          Swal.fire({
+            title: 'Login failed',
+            text: 'usuario o contraseña invalidos',
+            icon: 'error',
+            customClass: {
+              confirmButton: 'sweetalert-borderless-button'
+            },
+          });
           console.error('Invalid username or password');
         }
       }, error => {
-        Swal.fire('Error', 'Falla inesperada, prueba más tarde', 'error');
+        Swal.fire({
+          title: 'Error',
+          text: 'Falla inesperada, prueba más tarde',
+          icon: 'error',
+          customClass: {
+            confirmButton: 'sweetalert-borderless-button'
+          },
+        });
         console.error('Error logging in', error);
       });
     }

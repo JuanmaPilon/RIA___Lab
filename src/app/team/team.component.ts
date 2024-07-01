@@ -55,7 +55,13 @@ export class TeamComponent implements OnInit {
       showCancelButton: true,
       showDenyButton: fromTeam,
       confirmButtonText: fromTeam ? 'Quitar del equipo' : 'Agregar',
-      denyButtonText: 'Cancelar'
+      denyButtonText: 'Cancelar',
+      customClass: {
+        popup: 'sweetalert-borderless',
+        confirmButton: 'sweetalert-borderless-button',
+        cancelButton: 'sweetalert-borderless-button',
+        denyButton: 'sweetalert-borderless-button'
+      }
     }).then((result) => {
       if (result.isConfirmed) {
         if (fromTeam) {
@@ -72,9 +78,25 @@ export class TeamComponent implements OnInit {
       this.team.push(pokemon);
       console.log('Equipo actualizado:', this.team);
       this.saveTeamToServer();
-      Swal.fire('¡Agregado!', `${pokemon.name} ha sido agregado a tu equipo.`, 'success');
+      Swal.fire({
+        title: '¡Agregado!',
+        text: `${pokemon.name} ha sido agregado a tu equipo.`,
+        icon: 'success',
+        customClass: {
+          confirmButton: 'sweetalert-borderless-button',
+          cancelButton: 'sweetalert-borderless-button'
+        }
+      });
     } else {
-      Swal.fire('¡Equipo completo!', 'Ya tienes 5 Pokémon en tu equipo.', 'warning');
+      Swal.fire({
+        title: '¡Equipo completo!',
+        text: 'Ya tienes 5 Pokémon en tu equipo.',
+        icon: 'warning',
+        customClass: {
+          confirmButton: 'sweetalert-borderless-button',
+          cancelButton: 'sweetalert-borderless-button'
+        }
+      });
     }
   }
 
@@ -83,9 +105,25 @@ export class TeamComponent implements OnInit {
     if (index !== -1) {
       this.team.splice(index, 1);
       this.saveTeamToServer();
-      Swal.fire('¡Quitado!', `${pokemon.name} ha sido quitado de tu equipo.`, 'success');
+      Swal.fire({
+        title: '¡Quitado!',
+        text: `${pokemon.name} ha sido quitado de tu equipo.`,
+        icon: 'success',
+        customClass: {
+          confirmButton: 'sweetalert-borderless-button',
+          cancelButton: 'sweetalert-borderless-button'
+        }
+      });
     } else {
-      Swal.fire('No encontrado', `${pokemon.name} no está en tu equipo.`, 'error');
+      Swal.fire({
+        title: 'No encontrado',
+        text: `${pokemon.name} no está en tu equipo.`,
+        icon: 'error',
+        customClass: {
+          confirmButton: 'sweetalert-borderless-button',
+          cancelButton: 'sweetalert-borderless-button'
+        }
+      });
     }
   }
 
