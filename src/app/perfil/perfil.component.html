@@ -9,15 +9,25 @@
 
 <body>
   <div class="profile-container">
-   <img [src]="'../../assets/' + currentUser.pfp" class="profile-image" alt="Nombre de usuario">
-    <h2 class="profile-name">{{ currentUser.username}}</h2>
+    <img [src]="'../../assets/' + (currentUser.pfp || 'default.jpg')" class="profile-image" alt="Nombre de usuario" (click)="toggleImageSelector()">
+    <h2 class="profile-name">{{ currentUser.username || 'Nombre de usuario' }}</h2>
     <div class="profile-details">
-      <p>Nombre:  {{currentUser.nombre}}</p>
-      <p>Apellido: {{currentUser.apellido}}</p>
-      <p>Email: {{currentUser.email}}</p>
-      <p>Fecha de Nacimiento: {{currentUser.fdn}}</p>
-      <p>Pokémon Favorito: {{currentUser.favPok}}</p>
+      <p>Nombre: {{ currentUser.nombre || 'Nombre' }}</p>
+      <p>Apellido: {{ currentUser.apellido || 'Apellido' }}</p>
+      <p>Email: {{ currentUser.email || 'email@ejemplo.com' }}</p>
+      <p>Fecha de Nacimiento: {{ currentUser.fdn || 'YYYY-MM-DD' }}</p>
+      <p>Pokémon Favorito: {{ currentUser.favPok || 'Pokémon' }}</p>
     </div>
   </div>
+
+  <!-- Div para seleccionar la imagen de perfil -->
+  <div class="image-selector" *ngIf="imageSelectorVisible">
+    <div *ngFor="let image of availableImages" (click)="selectImage(image)">
+      <img [src]="'../../assets/' + image" alt="Profile Image" class="selectable-image">
+    </div>
+    <button (click)="toggleImageSelector()">Cerrar</button>
+  </div>
+
+
 </body>
 </html>
