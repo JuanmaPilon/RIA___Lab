@@ -4,8 +4,9 @@
       <div class="team-members-container">
         <div class="header">MI EQUIPO:</div>
         <div class="team-members">
-          <div *ngFor="let pokemon of pokemons.slice(0, 5)">
-            {{ pokemon.name }}
+          <div *ngFor="let pokemon of team">
+            <img [src]="pokemon.imageUrl" alt="{{ pokemon.name }}" class="team-member-img">
+            <div>{{ pokemon.name }}</div>
           </div>
         </div>
       </div>
@@ -24,10 +25,6 @@
                 <img [src]="pokemon.imageUrl" class="card-img-top" alt="{{ pokemon.name }}">
                 <div class="card-body text-center">
                   <h5 class="card-title text-capitalize">{{ pokemon.name }}</h5>
-                  <div class="buttons" *ngIf="selectedPokemon === pokemon">
-                    <button class="add-btn">Agregar</button>
-                    <button class="remove-btn">Quitar</button>
-                  </div>
                 </div>
               </div>
             </div>

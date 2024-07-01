@@ -58,7 +58,7 @@
     {
       "id": "1b1f",
       "username": "maladroga2",
-      "pfp": "perfil1.jpg",
+      "pfp": "perfil4.jpg",
       "password": "202cb962ac59075b964b07152d234b70",
       "nombre": "Nicolas",
       "apellido": "Silva",
@@ -75,17 +75,34 @@
       "apellido": "yo",
       "email": "yo@yo",
       "fdn": "2024-06-05",
-      "favPok": "yo"
-    }
-  ],
-  "equipo": [
-    {
-      "id": "1",
-      "Poke1": "A",
-      "Poke2": "B",
-      "Poke3": "C",
-      "Poke4": "E",
-      "Poke5": "F"
+      "favPok": "yo",
+      "equipo": [
+        {
+          "name": "Charizard",
+          "url": "https://pokeapi.co/api/v2/pokemon/6/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg"
+        },
+        {
+          "name": "Venusaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/3/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
+        },
+        {
+          "name": "ivysaur",
+          "url": "https://pokeapi.co/api/v2/pokemon/2/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
+        },
+        {
+          "name": "charmeleon",
+          "url": "https://pokeapi.co/api/v2/pokemon/5/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg"
+        },
+        {
+          "name": "charmander",
+          "url": "https://pokeapi.co/api/v2/pokemon/4/",
+          "imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg"
+        }
+      ]
     }
   ]
 }
