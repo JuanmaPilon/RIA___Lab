@@ -18,7 +18,7 @@
       <p>Fecha de Nacimiento: {{ currentUser.fdn || 'YYYY-MM-DD' }}</p>
       <p>Pokémon Favorito: {{ currentUser.favPok || 'Pokémon' }}</p>
     </div>
-  </div>
+
 
   <!-- Div para seleccionar la imagen de perfil -->
   <div class="image-selector" *ngIf="imageSelectorVisible">
@@ -28,6 +28,7 @@
     <button (click)="toggleImageSelector()">Cerrar</button>
   </div>
 
+</div>
 
 </body>
 </html>
