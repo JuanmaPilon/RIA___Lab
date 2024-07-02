@@ -46,13 +46,8 @@ export class TeamComponent implements OnInit {
   selectPokemon(pokemon: any, fromTeam: boolean = false): void {
     this.selectedPokemon = pokemon;
 
-    Swal.fire({
-      title: pokemon.name,
-      text: '¿Qué quieres hacer con este Pokémon?',
-      imageUrl: pokemon.imageUrl,
-      imageWidth: 200,
-      imageHeight: 200,
-      showCancelButton: true,
+    const buttonsConfig = {
+      showCancelButton: !fromTeam, // Mostrar Cancelar solo si no viene de tu equipo
       showDenyButton: fromTeam,
       confirmButtonText: fromTeam ? 'Quitar del equipo' : 'Agregar',
       denyButtonText: 'Cancelar',
@@ -62,6 +57,15 @@ export class TeamComponent implements OnInit {
         cancelButton: 'sweetalert-borderless-button',
         denyButton: 'sweetalert-borderless-button'
       }
+    };
+
+    Swal.fire({
+      title: pokemon.name,
+      text: '¿Qué quieres hacer con este Pokémon?',
+      imageUrl: pokemon.imageUrl,
+      imageWidth: 200,
+      imageHeight: 200,
+      ...buttonsConfig
     }).then((result) => {
       if (result.isConfirmed) {
         if (fromTeam) {
