@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { UserEventsService } from '../user-events';
 @Component({
   selector: 'app-perfil',
   standalone: true,
@@ -14,7 +14,7 @@ export class PerfilComponent implements OnInit {
   imageSelectorVisible: boolean = false;
   availableImages: string[] = ['perfil1.jpg', 'perfil2.jpg', 'perfil3.jpg', 'perfil4.jpg', 'perfil5.jpg', 'perfil6.jpg'];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private userEventsService: UserEventsService) {}
 
   ngOnInit(): void {
     const userData = localStorage.getItem('currentUser');
@@ -30,7 +30,7 @@ export class PerfilComponent implements OnInit {
 
       // Guardar el usuario actualizado en localStorage
       localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
-
+      this.userEventsService.updateUser(this.currentUser);
       // Enviar el usuario actualizado al backend para persistir los cambios
       this.http.put(`http://localhost:3000/usuario/${this.currentUser.id}`, this.currentUser)
         .subscribe(response => {

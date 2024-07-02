@@ -1,3 +1,4 @@
+<app-login></app-login>
 <nav class="navbar navbar-expand-lg navbar-light bg-light flex-grow-1 borde-navbar" style="background-image: url('assets/pokekira.jpg'); background-size: cover; background-position: center;">
   <a class="navbar-brand" href="#">
     <img src="assets/pokeadorno.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-top">
@@ -15,8 +16,9 @@
     <div class="navbar-nav ms-auto">
       <button *ngIf="!Sesion.isAuthenticated()" class="nav-link btn btn-link" (click)="openLoginModal()">Login</button>
       <button *ngIf="Sesion.isAuthenticated()" class="nav-link btn btn-link" (click)="logout()">Logout</button>
+      </div>
+      <img *ngIf="Sesion.isAuthenticated() && currentUser && currentUser.pfp" [src]="'../../assets/' + currentUser.pfp" class="profile-image" alt="Nombre de usuario">
     </div>
-  </div>
 </nav>
-<app-login></app-login>
+
 

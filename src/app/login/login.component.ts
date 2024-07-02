@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterComponent } from '../register/register.component';
 import { Router } from '@angular/router';
@@ -15,6 +15,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  @Output() loginSuccess: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild(RegisterComponent) register!: RegisterComponent;
   loginForm: FormGroup;
   isVisible: boolean = false;
@@ -57,6 +58,8 @@ export class LoginComponent {
                 confirmButton: 'sweetalert-borderless-button'
               }
           });
+          // Emitir evento de éxito de inicio de sesión con el usuario
+            this.loginSuccess.emit(user);
             // Simulación de sesión: guardar usuario en localStorage
             localStorage.setItem('currentUser', JSON.stringify(user));
 
