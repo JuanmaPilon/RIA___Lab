@@ -17,10 +17,10 @@
             <a href="#" class="nav-link" [routerLink]="['/pokedex']" routerLinkActive="active">Pokedex</a>
           </li>
           <li class="list-inline-item">
-            <a href="#" class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
+            <a *ngIf="Sesion.isAuthenticated()" href="#" class="nav-link" [routerLink]="['/team']" routerLinkActive="active">Team</a>
           </li>
           <li class="list-inline-item">
-            <a href="#" class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
+            <a *ngIf="Sesion.isAuthenticated()" href="#" class="nav-link" [routerLink]="['/perfil']" routerLinkActive="active">Perfil</a>
           </li>
         </ul>
       </div>

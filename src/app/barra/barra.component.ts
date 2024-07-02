@@ -44,7 +44,7 @@ export class BarraComponent implements OnInit, OnDestroy{
   }
   logout(): void {
     this.Sesion.logout();
-    window.location.href = '/login';
+    window.location.href = '/inicio';
   }
 
   openLoginModal(): void {
