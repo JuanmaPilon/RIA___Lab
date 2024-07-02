@@ -32,3 +32,33 @@ Para el desarrollo de nuestro laboratorio optamos por realizar una SPA (single p
 •	json Server
 
 ## Deploy:
+Comando para insatalar node:
+
+- npm install
+
+Luego se precede a instalar angular:
+
+- npm install -g @angular/cli
+
+Comandos para instalar el servidor json-server:
+
+- npm install json-server
+
+Comandos para instalar cryptojs
+
+- npm install crypto-js
+- npm install --save-dev @types/crypto-js
+
+libreria para animacion:
+
+- npm install animate.css --save
+- npm install sweetalert2 @sweetalert2/ngx-sweetalert2
+- npm install @sweetalert2/themes
+
+Comando para iniciar la aplicacion:
+
+- ng serve
+
+Despues deployar la bd:
+
+- npx json-server db.json
