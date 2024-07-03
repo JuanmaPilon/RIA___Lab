@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import * as CryptoJS from 'crypto-js';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -20,6 +21,7 @@ export class RegisterComponent {
       username: ['', [Validators.required]],
       pfp: ['perfil1.jpg'],
       password: ['', [Validators.required]],
+      confirmPassword: ['', [Validators.required, this.matchPassword.bind(this)]], // Add confirmPassword control
       nombre: ['', [Validators.required]],
       apellido: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -50,6 +52,15 @@ export class RegisterComponent {
 
       this.http.post('http://localhost:3000/usuario', user).subscribe(response => {
         console.log('User registered successfully', response);
+        Swal.fire({
+          title:'Usuario Creado',
+          text:'Bienvenido!',
+          icon:'success',
+         customClass: {
+           popup: 'sweetalert-borderless',
+           confirmButton: 'sweetalert-borderless-button'
+         }
+     });
         this.closeModal();
       }, error => {
         console.error('Error registering user', error);
